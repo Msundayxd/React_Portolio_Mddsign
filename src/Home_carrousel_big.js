@@ -10,8 +10,8 @@ function Carrousel () {
   // Array in which the carrousel images are stored with their corresponding data
 
   const items = [
-    { imageSrc: FirstImgCar, text: 'HEEK: A HEALTHY LIFESTYLE SOLUTION', id: 'imgcar1', uidesign: true, uxdesign: true, graphicdesign: true, programming: false },
-    { imageSrc: SecondImgCar, text: 'CREATING A PORTFOLIO WITH REACT', id: 'imgcar2', uidesign: true, uxdesign: true, graphicdesign: false, programming: true },
+    { imageSrc: FirstImgCar, text: 'CREATING A PORTFOLIO WITH REACT', id: 'imgcar2', uidesign: true, uxdesign: true, graphicdesign: false, programming: true },
+    { imageSrc: SecondImgCar, text: 'HEEK: A HEALTHY LIFESTYLE SOLUTION', id: 'imgcar1', uidesign: true, uxdesign: true, graphicdesign: true, programming: false},
     { imageSrc: ThirdImgCar, text: 'VINTAGE BILBAO: A SUSTAINABLE APP', id: 'imgcar3', uidesign: true, uxdesign: true, graphicdesign: false, programming: false},
     { imageSrc: FourthImgCar, text: 'SET OF INSTRUCTIVE CARDS FOR LEFEBVRE', id: 'imgcar4', uidesign: false, uxdesign: false, graphicdesign: true, programming: false}
   ];
