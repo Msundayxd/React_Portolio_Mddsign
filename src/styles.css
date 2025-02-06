@@ -1,0 +1,897 @@
+/* General styles & reset default styles */
+
+button {
+  background: none;
+	  color: inherit;
+	  border: none;
+	  padding: 0;
+	  font: inherit;
+	  cursor: pointer;
+	  outline: inherit;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit;        
+  cursor: pointer;
+}
+
+body {
+  overflow: overlay;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-family: "Hammersmith one";
+  font-weight: 300;
+  font-size: 36px;
+  color: #322D2D;
+}
+
+h3 {
+  font-family: "Hammersmith one";
+    font-weight: 300;
+    font-size: 28px;
+    color: #FFFFFF;
+}
+
+h4 {
+  font-family: "futura-pt-condensed", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #322D2D;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6D7178;
+}
+
+b {
+  color: #4e4949;
+  font-weight: 700;
+}
+
+
+  /* Icons */
+
+  .material-icons-round.md-dark { 
+    color: #322D2D;
+    font-size: 48px;
+    transition: all 0.5s ease-out;
+  }
+
+  .material-icons-round.md-dark:hover { 
+    scale: 1.1;
+    color: #999995;
+  }
+
+  .material-icons-round.md-light-bttn { 
+    color: #FFFFFF;
+    font-size: 32px;
+    margin-bottom: 3px;
+    margin-left: 8px;
+    transition: all 0.2s ease-out;
+  }
+
+
+  
+/* Scrollbar styles */
+
+*::-webkit-scrollbar {
+  display: block;
+  position: absolute;
+  width: 8px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #bbb2b270;
+}
+
+*::-webkit-scrollbar-track-piece {
+  background-color: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #4e4949;
+  border-radius: 24px;
+  opacity: 0.7;
+}
+
+
+
+/* Navbar component styles */
+
+.Div-nav {
+  box-sizing: border-box;
+  height: 72px;
+  width: 100%;
+  padding: 10px 118px 10px 118px;
+  background-color: white;
+  border-bottom: 3px solid #322D2D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(100, 103, 105, 0.1) 0px 0px 32px;
+  /* snap to top */
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+  .Logo-nav {
+    float: left;
+    transition: all 0.5s ease-out;
+  }
+
+  .Logo-nav:hover {
+    scale: 1.05;
+  }
+
+  .Links-nav li {
+    display: inline-flex;
+    max-width: 491px;
+  }
+
+  .Link-txt {
+    font-family: "Hammersmith one";
+    font-weight: 300;
+    font-size: 24px;
+    text-decoration: none;
+    color: #322D2D;
+    transition: all 0.5s ease-out;
+  }
+
+  .Link-txt:hover {
+    scale: 1.05;
+    color: #999995;
+  }
+
+  .Link-txt.active {
+    color: #999995;
+    text-decoration: underline 3px;
+  }
+
+
+
+  /* Carrousel */
+
+  .Home-main {
+    margin-top: 72px;
+    padding: 36px 0px 0px 0px;
+    opacity: 0;
+    animation: fadeInPage 0.5s forwards;
+  }
+
+  @keyframes fadeInPage {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .car-box {
+    text-align: center;
+    display: flex;
+    margin: 0px 16px 0px 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .restart-button-default {
+    background: none;
+	  color: inherit;
+	  border: none;
+	  padding: 0;
+	  font: inherit;
+	  cursor: pointer;
+	  outline: inherit;
+  }
+
+  .restart-button-default:hover {
+    cursor: pointer;
+  }
+
+  .img-car-box {
+    position: relative;
+  }
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.box-bttn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrouselbttn {
+  position: absolute;
+  z-index: 10;
+  font-family: "Hammersmith one";
+  height: fit-content;
+  font-weight: 300;
+  font-size: 32px;
+  padding: 8px 64px;
+  background-color: rgb(29, 26, 26);
+  box-sizing: border-box;
+  color: white;
+  border: 3px solid #FFFFFF;
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
+  box-shadow: rgba(227, 232, 237, 0.2) 0px 0px 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.carrouselbttn:hover {
+  background-color: #999995 ;
+  scale: 1.01;
+}
+
+.carrouselbttn:hover .material-icons-round.md-light-bttn {
+  scale: 1.01;
+}
+
+.box-bttn:hover .carrouselbttn {
+  opacity: 1; 
+  pointer-events: auto;
+}
+
+.box-bttn:hover .overlay {
+  scale: 1.01;
+  opacity: 1;
+  filter: blur(1px);
+}
+
+.box-bttn:hover .img-carrousel-big {
+  scale: 1.01;
+  opacity: 90%;
+  filter: blur(1px);
+}
+
+.box-bttn:hover .carrousel-title {
+  scale: 1.01;
+  position: absolute;
+  bottom: -8px;
+  left: 16px;
+  z-index: 14;
+}
+
+.box-bttn:hover .tags-car-big {
+  scale: 1.01;
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  z-index: 14;
+}
+
+.img-carrousel-big {
+  max-height: 720px;
+  height: 92vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
+  transition: all 0.5s ease-out;
+}
+
+/* Carrousel transitions */
+
+#imgcar1 {
+  animation: fadeIn1 ease-in 600ms;
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0.7;
+    scale: 1.001;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#imgcar2 {
+  animation: fadeIn2 ease-in 600ms;
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0.7;
+    scale: 1.001;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#imgcar3 {
+  animation: fadeIn3 ease-in 600ms;
+}
+
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0.7;
+    scale: 1.001;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#imgcar4 {
+  animation: fadeIn4 ease-in 600ms;
+}
+
+@keyframes fadeIn4 {
+  0% {
+    opacity: 0.7;
+    scale: 1.001;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.car-box-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+  .carrousel-title {
+    font-family: "Hammersmith one";
+    font-weight: 300;
+    font-size: 36px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: -8px;
+    left: 16px;
+    z-index: 14;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+  }
+
+  .carrousel-title:hover {
+    cursor: pointer;
+  }
+
+  /* Underline animation */
+
+  .carrousel-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .carrousel-title:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* End of underline animation */
+
+  .tags-car-big {
+    position: absolute;
+    bottom: 24px;
+    right: 16px;
+    transition: all 0.5s ease-out;
+    z-index: 14;
+  }
+
+
+  /* Each tag style */
+
+  .Ui-tag {
+    height: 42px;
+    background-color: #598FE6;
+    padding: 8px 16px 8px 16px;
+    font-size: 20px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
+    margin-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+
+  .Ui-tag:hover {
+    background-color: #999995;
+    scale: 1.01;
+  }
+
+  .Ux-tag {
+    height: 42px;
+    background-color: #94B227;
+    padding: 8px 16px 8px 16px;
+    font-size: 20px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
+    margin-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+
+  .Ux-tag:hover {
+    background-color: #999995;
+    scale: 1.01;
+  }
+
+  .Graphic-tag {
+    height: 42px;
+    background-color: #AE445D;
+    padding: 8px 16px 8px 16px;
+    font-size: 20px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
+    margin-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+
+  .Graphic-tag:hover {
+    background-color: #999995;
+    scale: 1.01;
+  }
+
+  .Programming-tag {
+    height: 42px;
+    background-color: #CF7030;
+    padding: 8px 16px 8px 16px;
+    font-size: 20px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 24px;
+    margin-left: 8px;
+    transition: all 0.3s ease-out;
+  }
+
+  .Programming-tag:hover {
+    background-color: #999995;
+    scale: 1.01;
+  }
+
+
+
+
+  /* Home gallery styles */
+
+  .Hgallery-bg {
+    background-color: #322D2D;
+    margin-top: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .Hgallery-content {
+    padding-top: 40px;
+    width: 71vw;
+    max-width: 1168px;
+    padding-bottom: 72px;
+    transition: all 0.5s ease-out;
+  }
+
+  .Hgallery-title-nav {
+    display: block;
+  }
+
+  .Hgallery-nav {
+    box-sizing: border-box;
+    border: 3px solid #FFFFFF;
+    padding: 8px 20px 8px 20px;
+    margin-top: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 640px;
+  }
+
+  .Margin-control {
+    width: 48px;
+    height: fit-content;
+  }
+
+  .Hgallery-nav-bttn {
+    font-size: 24px;
+    font-family: "futura-pt-condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #FFFFFF;
+    transition: all 0.3s ease-out;
+  }
+  
+
+  #bttn-ui:active {
+    color: #598FE6;
+  }
+
+  #bttn-ux:active {
+    color: #94B227;
+  }
+
+  #bttn-graphic:active {
+    color: #AE445D;
+  }
+
+  #bttn-programming:active {
+    color: #CF7030;
+  }
+
+  .Hgallery-nav-bttn:hover {
+    scale: 1.05;
+    color: #c1b8b8;
+  }
+
+  .Hgallery-nav-bttn.active {
+    color: #999995;
+    text-decoration: underline 3px;
+  }
+
+  .Hgallery-nav-bttn.activeui {
+    color: #598FE6;
+    text-decoration: underline 3px;
+  }
+
+  .Hgallery-nav-bttn.activeux {
+    color: #94B227;
+    text-decoration: underline 3px;
+  }
+
+  .Hgallery-nav-bttn.activegraphic {
+    color: #AE445D;
+    text-decoration: underline 3px;
+  }
+
+  .Hgallery-nav-bttn.activeprogramming {
+    color: #CF7030;
+    text-decoration: underline 3px;
+  }
+
+  .mid-gallery-container {
+    width: 71vw;
+    max-width: 1168px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    min-height: 24.5vw;
+  }
+
+  .mid-gallery-element {
+    width: 22vw;
+    animation: fadeInGal ease-in 600ms;
+    height: 22vw;
+    margin-top: 2.5vw;
+    position: relative;
+  }
+
+  @keyframes fadeInGal {
+    0% {
+      opacity: 0;
+      scale: 1.001;
+      transform: translateY(4px);
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mid-gallery-element:hover {
+    scale: 1.01;
+    cursor: pointer;
+  }
+
+  .overlay-soft {
+    width: 22vw;
+    height: 22vw;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.4s ease-out;
+  }
+
+  .mid-gallery-element:hover .overlay-soft {
+    scale: 1.005;
+    opacity: 1;
+    filter: blur(1px);
+    z-index: 2;
+  }
+
+  .mid-gallery-element:hover .gallery-img-title {
+    cursor: pointer;
+    text-decoration: underline 3px;
+    scale: 1.01;
+  }
+
+  .mid-gallery-element:hover .gallery-image {
+    filter: blur(1px);
+  }
+
+  .gallery-img-title {
+    font-family: "Hammersmith one";
+    font-weight: 300;
+    font-size: 24px;
+    margin-left: 16px;
+    align-self: flex-end;
+    width: inherit;
+    position: relative;
+    top: 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+  }
+
+  .gallery-img-title:hover {
+    cursor: pointer;
+    text-decoration: underline 3px;
+    scale: 1.01;
+  }
+
+  .gallery-image {
+    width: 22vw;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+  }
+
+.gallery-image.visible {
+  opacity: 1;
+}
+
+  .gallery-txt-box {
+    display: flex;
+    align-items: flex-end;
+    max-width: 19vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 120px;
+    z-index: 14;
+    position: relative;
+    top: -138px;
+  }
+
+  .gallery-tags {
+    display: inline-flex;
+    align-content: space-between;
+    flex-direction: column;
+  }
+
+  .Ui-tag-small {
+    width: 24px;
+    height: 24px;
+    background-color: #598FE6;
+  }
+
+  .Ux-tag-small {
+    width: 24px;
+    height: 24px;
+    background-color: #94B227;
+  }
+
+   .Graphic-tag-small {
+    width: 24px;
+    height: 24px;
+    background-color: #AE445D;
+  }
+
+  .Programming-tag-small {
+    width: 24px;
+    height: 24px;
+    background-color: #CF7030;
+  }
+
+  .mid-bttn-default {
+    font-family: "Hammersmith one";
+    height: fit-content;
+    font-weight: 300;
+    font-size: 28px;
+    padding: 8px 64px;
+    background-color: rgb(29, 26, 26);
+    box-sizing: border-box;
+    color: white;
+    border: 3px solid #FFFFFF;
+    transition: all 0.3s ease-out;
+    margin-top: 40px;
+    box-shadow: rgba(43, 46, 49, 0.2) 0px 0px 24px;
+  }
+
+  .mid-bttn-default:hover {
+    background-color: #999995 ;
+    scale: 1.01;
+  }
+
+  .gal-bttn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  /* About small section Home */
+
+  .Abt-small-bg {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .Abt-small-bg > section {
+    background-color: #D2E2F5;
+    max-height: 480px;
+    height: 61vh;
+    margin: 96px 0px 116px 0px;
+  }
+
+  .Abt-small-content {
+    max-height: 363px;
+    height: 46vh;
+    padding: 7vh 0px 7vh 0px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .Abt-small-content > img {
+    max-height: 363px;
+    height: 46vh;
+  }
+
+  .Abt-small-txt {
+    max-width: 746px;
+    margin: -32px 54px 0px 38px;
+  }
+
+  .Abt-small-txt > h1 {
+    transition: all 0.4s ease-out;
+  }
+
+  .Abt-small-txt > h1:hover {
+    scale: 1.05;
+    padding-left: 16px;
+    color: #6D7178;
+    cursor: pointer;
+    text-decoration: underline overline 3px;
+    text-underline-offset: 8px;
+  }
+
+  .Abt-small-sub {
+    display: inline-flex;
+    gap: 48px;
+    margin-bottom: 16px;
+  }
+
+  .h4-underline {
+    text-decoration: none;
+    transition: transform 0.25s ease-out;
+    position: relative;
+    display: inline-block;
+  }
+
+  .h4-underline:hover {
+    cursor: pointer;
+  }
+
+  .h4-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #322D2D;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .h4-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .Button-default {
+    font-family: "Hammersmith one";
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 300;
+    font-size: 28px;
+    padding: 8px 64px;
+    background-color: #F5F0F0;
+    box-sizing: border-box;
+    color: #322D2D;
+    border: 3px solid #322D2D;
+    transition: all 0.2s ease-out;
+    box-shadow: rgba(100, 103, 105, 0.2) 0px 0px 24px;
+  }
+
+  .Button-default > span {
+    color: #322D2D;
+    font-size: 48px;
+  }
+
+  .Button-default:hover {
+    background-color: #6D7178 ;
+    scale: 1.01;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+  }
+
+  .Button-default:hover > span {
+    color: #FFFFFF;
+  }
+
+
+
+  /* Footer */
+
+  .Footer-bg {
+    box-sizing: border-box;
+    height: 426px;
+    width: 100%;
+    padding: 10px 118px 10px 118px;
+    background-color: white;
+    border-top: 3px solid #322D2D;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(100, 103, 105, 0.1) 0px 0px 32px;
+  }
